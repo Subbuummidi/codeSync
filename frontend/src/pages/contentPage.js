@@ -12,7 +12,7 @@ export default function Next() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post('http://localhost:3000/', { name });
+                const response = await axios.post('https://codesync-1-cmg6.onrender.com/', { name });
                 setCon(response.data.content);
             } catch (error) {
                 console.error("There was an error fetching data!", error);
@@ -24,7 +24,7 @@ export default function Next() {
 
     const saveContent = async () => {
         try {
-            await axios.post('http://localhost:3000/savee', {
+            await axios.post('https://codesync-1-cmg6.onrender.com/savee', {
                 name,
                 content
             });
